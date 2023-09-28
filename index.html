@@ -1,1 +1,21 @@
-<a href="getLink.js">Link</a>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uygulama Yönlendirme</title>
+</head>
+<body>
+  <script>
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    if (/android/i.test(userAgent)) {
+      window.location.href = "https://play.google.com/store/apps/details?id=your-android-app-package";
+    } else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+      window.location.href = "https://apps.apple.com/app/your-ios-app-id";
+    } else {
+      // Diğer platformlar için varsayılan bağlantı
+      window.location.href = "https://example.com";
+    }
+  </script>
+</body>
+</html>
+

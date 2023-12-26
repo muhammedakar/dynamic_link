@@ -8,7 +8,16 @@
     <img src="truck.png" alt="Görsel Açıklaması">
   </div>
   <script>
-      window.location.href = "flask_api.py";
+     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    if (/android/i.test(userAgent)) {
+      window.location.href = "https://play.google.com/store/apps/details?id=com.mrakar.tevkifat_bedeli";
+    } else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+      window.location.href = "https://apps.apple.com/tr/app/tevkifat-kdv-fatura-hesaplama/id6465623991?l=tr";
+    } else {
+      // Diğer platformlar için varsayılan bağlantı
+      window.location.href = "https://play.google.com/store/apps/details?id=com.mrakar.tevkifat_bedeli";
+    }
     
   </script>
 </body>
